@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<link rel="stylesheet" title="default" href="/botmaster/common/default.css" type="text/css">
+<SCRIPT>
+<!--
+function sf(){document.f.input.focus();}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY lang="en-US" bgColor="#AAAAAA" onload="sf()">
+
+
+<b>
+<template><srai>SET PREDICATES</srai></template>
+<template>
+<condition>
+<li name="name" value="Seeker">Please identify yourself.</li>
+<li name="name" value="*">A.L.I.C.E. and <get name="name"/></li>
+<li>Identify yourself. <think><set name="name">Seeker</set></think></li>
+</condition>
+</template>
+</b>
+<br/><br/>
+
+<b>You said:</b> <template><input/></template><br/>
+<b>A.L.I.C.E.:</b> <template><response/></template><br/>
+
+<br/>
+<form name="f" action="" method="post">
+!CUSTID! 
+<P><font face="arial"><b>You say:</b></font> 
+<!--
+<input type="text" size="60" name="input" x-webkit-speech />
+-->
+<input type="text" size="60" name="input"/> 
+<input type="submit" value="Say"/>
+</P>
+</form>
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<em>
+<a href="http://alicebot.org/join.html" target="_new">
+<template>
+<random>
+<li>Join the ALICE A.I. Foundation.</li>
+<li>Learn how this works.</li>
+<li>Create your own chat bot.</li>
+<li>Get an A.I. Foundation membership certificate.</li>
+<li>Read about ALICE and AIML.</li>
+<li>Put a bot on your website.</li>
+<li>Listen to two bots talking to each other!</li>
+<li>Link this bot to a talking animated avatar.</li>
+</random>
+</template>
+</a>
+</em>
+
+<HR/>
+<b>Conversation Log:</b>
+<br/> 
+<template>
+<think>Pandorabots remembers up to 12 previous exchanges.</think>
+<think>
+<set name="input12"><request index="12"/></set>
+<set name="input11"><request index="11"/></set>
+<set name="input10"><request index="10"/></set>
+<set name="input9"><request index="9"/></set>
+<set name="input8"><request index="8"/></set>
+<set name="input7"><request index="7"/></set>
+<set name="input6"><request index="6"/></set>
+<set name="input5"><request index="5"/></set>
+<set name="input4"><request index="4"/></set>
+<set name="input3"><request index="3"/></set>
+<set name="input2"><request index="2"/></set>
+<set name="input1"><request/></set>
+<set name="output12"><response index="12"/></set>
+<set name="output11"><response index="11"/></set>
+<set name="output10"><response index="10"/></set>
+<set name="output9"><response index="9"/></set>
+<set name="output8"><response index="8"/></set>
+<set name="output7"><response index="7"/></set>
+<set name="output6"><response index="6"/></set>
+<set name="output5"><response index="5"/></set>
+<set name="output4"><response index="4"/></set>
+<set name="output3"><response index="3"/></set>
+<set name="output2"><response index="2"/></set>
+<set name="output1"><response/></set>
+</think>
+
+
+
+<condition name="input12" value="*">
+<br/>
+<get name="name"/>: <get name="input12"/>
+<br/>
+<bot name="name"/>: <get name="output12"/>
+</condition>
+
+
+<condition name="input11" value="*">
+<br/>
+<get name="name"/>: <get name="input11"/>
+<br/>
+<bot name="name"/>: <get name="output11"/>
+</condition>
+
+<condition name="input10" value="*">
+<br/>
+<get name="name"/>: <get name="input10"/>
+<br/>
+<bot name="name"/>: <get name="output10"/>
+</condition>
+
+<condition name="input9" value="*">
+<br/>
+<get name="name"/>:  <get name="input9"/>
+<br/>
+<bot name="name"/>: <get name="output9"/>
+</condition>
+
+<condition name="input8" value="*">
+<br/>
+<get name="name"/>: <get name="input8"/>
+<br/>
+<bot name="name"/>: <get name="output8"/>
+</condition>
+
+<condition name="input7" value="*">
+<br/>
+<get name="name"/>: <get name="input7"/>
+<br/>
+<bot name="name"/>: <get name="output7"/>
+</condition>
+
+<condition name="input6" value="*">
+<br/>
+<get name="name"/>: <get name="input6"/>
+<br/>
+<bot name="name"/>: <get name="output6"/>
+</condition>
+
+<condition name="input5" value="*">
+<br/>
+<get name="name"/>: <get name="input5"/>
+<br/>
+<bot name="name"/>: <get name="output5"/>
+</condition>
+
+<condition name="input4" value="*">
+<br/>
+<get name="name"/>: <get name="input4"/>
+<br/>
+<bot name="name"/>: <get name="output4"/>
+</condition>
+
+<condition name="input3" value="*">
+<br/>
+<get name="name"/>: <get name="input3"/>
+<br/>
+<bot name="name"/>: <get name="output3"/>
+</condition>
+
+
+<condition name="input2" value="*">
+<br/>
+<get name="name"/>: <get name="input2"/>
+<br/>
+<bot name="name"/>: <get name="output2"/>
+</condition>
+
+
+<condition name="input1" value="*">
+<br/>
+<get name="name"/>: <get name="input1"/>
+<br/>
+<bot name="name"/>: <get name="output1"/>
+</condition>
+
+</template>

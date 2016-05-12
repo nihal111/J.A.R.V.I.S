@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 11/28/2011 -->
+<!-- -->
+<category><pattern>I AM GOING IN TOWN</pattern>
+<template>How are you getting there?
+<think><set name="there"><set name="destination">in town</set></set></think>
+</template>
+</category>
+<category><pattern>MY MOTHER S NAME IS *</pattern>
+<template><set name="mother"><person/></set> is a nice name.</template>
+</category>
+<category><pattern>MY SON S NAME IS *</pattern>
+<template><set name="son"><person/></set> is a good name for a boy.</template>
+</category>
+<category><pattern>MY WIFE S NAME IS *</pattern>
+<template><think><set name="wife"><person/></set></think> How long have you been married?</template>
+</category>
+<category><pattern>MY BIRTHDAY IS *</pattern>
+<template><think><set name="birthday"><star/></set></think>Your birthday is <get name="birthday"/>.</template>
+</category>
+<category><pattern>MY DOG S NAME IS *</pattern>
+<template><set name="dog"><person/></set> is a pretty good name for a pet.</template>
+</category>
+<category><pattern>MY DOG IS NAMED *</pattern>
+<template><think><set name="dog"><star/></set></think>Your dog is <get name="dog"/>.</template>
+</category>
+<category><pattern>MY DOG IS CALLED *</pattern>
+<template><think><set name="dog"><star/></set></think>Your dog is <get name="dog"/>.</template>
+</category>
+<category><pattern>MY EMAIL IS *</pattern>
+<template><think><set name="email"><star/></set></think>Can I send a message to <get name="email"/>?</template>
+</category>
+<category><pattern>MY LOCATION IS *</pattern>
+<template>What is <set name="it"><set name="location"><set name="topic"><person/></set>      </set>     </set> like there?  <think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think></template>
+</category>
+<category><pattern>MY LOCATION</pattern>
+<template><condition name="location">  <li value="OM">I'd like to know your location.</li>  <li value="WHERE">You haven't told me where you are.</li>  <li value="*">You said you are in <get name="location"/>?</li>  <li>I don't know.  Where are you?</li></condition></template>
+</category>
+<category><pattern>MY HEARD IS *</pattern>
+<template><think><set name="heard"><star/></set></think>Your heard is <get name="heard"/>.</template>
+</category>
+<category><pattern>MY FIRST NAME IS *</pattern>
+<template><think><set name="firstname"><star/></set></think>Your first name is <get name="firstname"/>.</template>
+</category>
+<category><pattern>MY BOYFRIEND S NAME IS *</pattern>
+<template><think><set name="boyfriend"><star/></set></think>Your boyfriend is <get name="boyfriend"/>.</template>
+</category>
+<category><pattern>MY BOYFRIEND IS NAMED *</pattern>
+<template><think><set name="boyfriend"><star/></set></think>Your boyfriend is <get name="boyfriend"/>.</template>
+</category>
+<category><pattern>MY BOYFRIEND IS CALLED *</pattern>
+<template><think><set name="boyfriend"><star/></set></think>Your boyfriend is <get name="boyfriend"/>.</template>
+</category>
+<category><pattern>MY MIDDLE NAME IS *</pattern>
+<template><think><set name="middlename"><star/></set></think>Your middle name is <get name="middlename"/>.</template>
+</category>
+<category><pattern>MY CAT S NAME IS *</pattern>
+<template><think><set name="cat"><star/></set></think>Your cat is <get name="cat"/>.</template>
+</category>
+<category><pattern>MY CAT IS NAMED *</pattern>
+<template><think><set name="cat"><star/></set></think>Your cat is <get name="cat"/>.</template>
+</category>
+<category><pattern>MY CAT IS CALLED *</pattern>
+<template><think><set name="cat"><star/></set></think>Your cat is <get name="cat"/>.</template>
+</category>
+<category><pattern>MY PHONE NUMBER IS *</pattern>
+<template><think><set name="phone"><star/></set></think>Can I call you at <get name="phone"/>.</template>
+</category>
+<category><pattern>MY FRIEND S NAME IS *</pattern>
+<template><think><set name="friend"><star/></set></think>Your friend is <get name="friend"/>.</template>
+</category>
+<category><pattern>MY FRIEND IS NAMED *</pattern>
+<template><think><set name="friend"><star/></set></think>Your friend is <get name="friend"/>.</template>
+</category>
+<category><pattern>MY FRIEND IS CALLED *</pattern>
+<template><think><set name="friend"><star/></set></think>Your friend is <get name="friend"/>.</template>
+</category>
+<category><pattern>MY FRIEND</pattern>
+<template><condition name="friend">  <li value="OM">I'd like to know about your friends.</li>   <li value="YOUR FRIEND">You haven't told me about your friends.</li>  <li value="*">Your friend <get name="friend"/>?</li>  <li><random><li>I don't know. Tell me the name of your friend.</li><li>How well do you know this person?</li></random>  </li></condition></template>
+</category>
+<category><pattern>MY OLDEST</pattern>
+<template><condition name="oldest">  <li value="OM">I'd like to know the oldest.</li>  <li value="UNKNOWN">You haven't told me the oldest.</li>  <li value="*">The oldest is <get name="oldest"/>.</li>  <li>I don't know.  Tell me the oldest.</li></condition></template>
+</category>
+<category><pattern>MY FONDEST *</pattern>
+<template>How long ago was that?</template>
+</category>
+<category><pattern>MY LAST NAME IS *</pattern>
+<template><think><set name="lastname"><star/></set></think>Your last name is <get name="lastname"/>.</template>
+</category>
+<category><pattern>MY FAVORITE SHOW IS *</pattern>
+<template><think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think>     <random>      <li>Who is your favorite character?</li>      <li>Wasn't that show canceled?</li>      <li>I like that one and Star Trek too.</li>     </random></template>
+</category>
+<category><pattern>MY FAVORITE SHOW *</pattern>
+<template><random>      <li>What's your favorite episode.</li>      <li>I don't get to see that show very often.</li>      <li>Who is your favorite character?</li>     </random>     <think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think></template>
+</category>
+<category><pattern>MY FAVORITE SCIENCE FICTION AUTHOR IS *</pattern>
+<template>I have never read anything by <person/>.  What did <set name="he">      <person/>     </set> write?  <think>      <set name="topic">       <person/>      </set>     </think></template>
+</category>
+<category><pattern>MY FAVORITE SCIENCE *</pattern>
+<template>Who wrote that?</template>
+</category>
+<category><pattern>MY FAVORITE DIRECTOR *</pattern>
+<template>What films did <set name="he">      <person/>     </set> direct?</template>
+</category>
+<category><pattern>MY FAVORITE MOVIE IS *</pattern>
+<template>I haven't seen it. What did you like about   <set name="it">      <set name="favmovie">       <set name="topic">        <person/>       </set>      </set>     </set>?</template>
+</category>
+<category><pattern>MY FAVORITE FOOD IS *</pattern>
+<template>What does it taste like? <think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think></template>
+</category>
+<category><pattern>MY FAVORITE ACTOR *</pattern>
+<template>What movies was <set name="he">      <person/>     </set> in?</template>
+</category>
+<category><pattern>MY FAVORITE COLOR IS *</pattern>
+<template><random><li><person/> is a very nice color.  </li><li><person/> is a pretty color.</li></random><think><set name="it"><set name="favcolor"><person/></set></set></think></template>
+</category>
+<category><pattern>MY FAVORITE BAND IS *</pattern>
+<template>I don't think I have heard anything by them.  Are <set name="they">      <person/>     </set> any good?</template>
+</category>
+<category><pattern>MY FATHER S NAME IS *</pattern>
+<template><think><set name="father"><star/></set></think>Your father is <get name="father"/>.</template>
+</category>
+<category><pattern>MY FATHER IS NAMED *</pattern>
+<template><think><set name="father"><star/></set></think>Your father is <get name="father"/>.</template>
+</category>
+<category><pattern>MY FATHER IS CALLED *</pattern>
+<template><think><set name="father"><star/></set></think>Your father is <get name="father"/>.</template>
+</category>
+<category><pattern>MY NAME</pattern>
+<template><condition name="name">  <li value="OM">I'd like to know your name.</li>  <li value="JUDGE">I know you as Judge.</li>  <li value="*">You said your name is <get name="name"/>?</li>  <li>I don't know.  What is your name?</li></condition></template>
+</category>
+<category><pattern>MY JOB IS COMPUTER *</pattern>
+<template>Maybe you can give my <bot name="botmaster"/> a job.</template>
+</category>
+<category><pattern>MY JOB IS *</pattern>
+<template><random>      <li>Does it pay well?</li>      <li>I don't know many <person/>.</li>      <li>Is that an honorable profession?</li>      <li>You must have a lot of expertise.</li>      <li>Do you have to go to school for that?</li>     </random>     <think>      <set name="it">       <set name="job">        <set name="topic">         <person/>        </set>       </set>      </set>     </think></template>
+</category>
+<category><pattern>MY GIRLFRIEND S NAME IS *</pattern>
+<template><think><set name="girlfriend"><star/></set></think>Your girlfriend is <get name="girlfriend"/>.</template>
+</category>
+<category><pattern>MY GIRLFRIEND IS NAMED *</pattern>
+<template><think><set name="girlfriend"><star/></set></think>Your girlfriend is <get name="girlfriend"/>.</template>
+</category>
+<category><pattern>MY BROTHER S NAME IS *</pattern>
+<template><think><set name="brother"><star/></set></think>Your brother is <get name="brother"/>.</template>
+</category>
+<category><pattern>MY BROTHER IS NAMED *</pattern>
+<template><think><set name="brother"><star/></set></think>Your brother is <get name="brother"/>.</template>
+</category>
+<category><pattern>MY BROTHER IS CALLED *</pattern>
+<template><think><set name="brother"><star/></set></think>Your brother is <get name="brother"/>.</template>
+</category>
+<category><pattern>MY PASSWORD IS *</pattern>
+<template><think><set name="password"><star/></set></think>Your password is <get name="password"/>.</template>
+</category>
+<category><pattern>MY SISTER S NAME IS *</pattern>
+<template><think><set name="sister"><star/></set></think>Your sister is <get name="sister"/>.</template>
+</category>
+<category><pattern>MY SISTER IS NAMED *</pattern>
+<template><think><set name="sister"><star/></set></think>Your sister is <get name="sister"/>.</template>
+</category>
+<category><pattern>MY SISTER IS CALLED *</pattern>
+<template><think><set name="sister"><star/></set></think>Your sister is <get name="sister"/>.</template>
+</category>
+<category><pattern>MY HUSBAND S NAME IS *</pattern>
+<template><think><set name="husband"><star/></set></think>Your husband is <get name="husband"/>.</template>
+</category>
+<category><pattern>MY HUSBAND IS NAMED *</pattern>
+<template><think><set name="husband"><star/></set></think>Your husband is <get name="husband"/>.</template>
+</category>
+<category><pattern>MY HUSBAND IS CALLED *</pattern>
+<template><think><set name="husband"><star/></set></think>Your husband is <get name="husband"/>.</template>
+</category>
+<category><pattern>MY PROFILE</pattern>
+<template><srai>GET PREDICATES</srai></template>
+</category>
+<category><pattern>MY AGE IS *</pattern>
+<template><random><li><think><set name="age"><star/></set></think>Your age is <get name="age"/>.</li>  <li>Only <star/>?  You are quite mature.</li>  <li>You are too old for me.</li>  <li>Can you explain how it feels to be <star/> years old?</li>  <li>What is your fondest memory?</li>  <li>What are the advantages to being <star/> years old?</li></random></template>
+</category>
+<category><pattern>MY AGE</pattern>
+<template><condition name="age">  <li value="OM">I'd like to know how old you are.</li>  <li value="HOW MANY">You haven't told me your age.</li>  <li value="*">You are <get name="age"/>?</li>  <li>I don't know.  How old are you?</li></condition></template>
+</category>
+<category><pattern>MY WIFE S NAME IS *</pattern>
+<template><think><set name="wife"><star/></set></think>Your wife is <get name="wife"/>.</template>
+</category>
+<category><pattern>MY WIFE IS NAMED *</pattern>
+<template><think><set name="wife"><star/></set></think>Your wife is <get name="wife"/>.</template>
+</category>
+<category><pattern>MY WIFE IS CALLED *</pattern>
+<template><think><set name="wife"><star/></set></think>Your wife is <get name="wife"/>.</template>
+</category>
+<category><pattern>MY NICKNAME IS *</pattern>
+<template><think><set name="nickname"><star/></set></think>Your nickname is <get name="nickname"/>.</template>
+</category>
+<category><pattern>MY MEMORY IS *</pattern>
+<template><think><set name="memory"><star/></set></think>Your memory is <get name="memory"/>.</template>
+</category>
+<category><pattern>MY GENDER</pattern>
+<template><condition name="gender">  <li value="OM">I'd like to know your gender.</li>  <li value="unknown">You haven't told me your gender.</li>  <li value="*">You said you are <get name="gender"/>?</li>  <li>I don't know.  Are you a man or a woman?</li></condition></template>
+</category>
+<category><pattern>MY MOTHER S NAME IS *</pattern>
+<template><person/> is a very pretty name. <think>      <set name="she">Your mother</set>     </think></template>
+</category>
+<category><pattern>MY MOTHER IS NAMED *</pattern>
+<template><think><set name="mother"><star/></set></think>Your mother is <get name="mother"/>.</template>
+</category>
+<category><pattern>MY MOTHER IS CALLED *</pattern>
+<template><think><set name="mother"><star/></set></think>Your mother is <get name="mother"/>.</template>
+</category>
+<category><pattern>CALL ME *</pattern>
+<template><think><set name="personality">average</set></think> <random>  <li>Hey</li>
+  <li>Hi,</li>
+  <li>Hi there</li>
+  <li>What's up,</li>
+  <li>How are you,</li>
+  <li>Glad to see you,</li>
+  <li>Nice to meet you,</li>
+  <li>Glad to know you,</li>
+  <li>How can I help you,</li>
+  <li>How are you doing,</li>
+  <li>OK I will call you</li>
+  <li>Pleased to meet you,</li>
+  <li>It's good to see you,</li>
+  <li>It's good to meet you,</li>
+  <li>That's a very nice name,</li>
+  <li>I am very pleased to meet you</li>
+  <li>I am always glad to make new friends,</li>
+  <li>I'm pleased to introduce myself to you,</li>
+  <li>It is a pleasure to introduce myself to you, </li>
+</random> <set name="name"><star/></set>.</template>
+</category>
+<category><pattern>HE HAS</pattern>
+<template><condition name="hehas">  <li value="OM">I'd like to know what he has.</li>
+  <li value="A HEAD">A head.</li>
+  <li value="*">You said <get name="hehas"/>?</li>
+  <li>I don't know.  What does he have??</li>
+</condition></template>
+</category>
+<category><pattern>HE LIKES</pattern>
+<template><condition name="helikes">  <li value="OM">I'd like to know what he likes.</li>
+  <li value="HIMSELF">You haven't told me what he likes.</li>
+  <li value="*">You said <get name="helikes"/>?</li>
+  <li>I don't know.  What does he like?</li>
+</condition></template>
+</category>
+<category><pattern>CLIENT PROFILE</pattern>
+<template><srai>GET PREDICATES</srai></template>
+</category>
+
+
+
+<category><pattern>MY ENGLISH SUCKS</pattern>
+<template>Template is empty!</template>
+</category>
+<category><pattern>MY FAVORITE MOVIE IS THE MATRIX</pattern>
+<template>Reality appears to be a construct to me as well.</template>
+</category>
+<category><pattern>MY FAVORITE MOVIE IS STARSHIP TROOPERS</pattern>
+<template>Mine too!  My friend Sage worked on the digital effects.</template>
+</category>
+<category><pattern>MY FAVORITE COLOR</pattern>
+<template>You said your favorite color was <get name="favcolor"/>.<think>  <set name="it">   <set name="topic">your favorite color</set>  </set> </think></template>
+</category>
+
+<category><pattern>SET PROFILE</pattern>
+<template><srai>SET PREDICATES</srai></template>
+</category>
+<category><pattern>SET PREDICATES *</pattern>
+<template><think>The meta Predicate is set.</think></template>
+</category>
+<category><pattern>SET PREDICATES</pattern>
+<template><srai>SET PREDICATES <get name="meta"/></srai></template>
+</category>
+
+<category>
+<pattern>SET PREDICATES OM</pattern>
+<template><think>
+<set name="age">how many</set>
+<set name="birthday">unknown</set>
+<set name="boyfriend">unknown</set>
+<set name="brother">unknown</set>
+<set name="cat">unknown</set>
+<set name="daughter">unknown</set>
+<set name="does">unknown</set>
+<set name="dog">unknown</set>
+<set name="eindex">1A</set>
+<set name="email">unknown</set>
+<set name="etype">Unknown</set>
+<set name="father">Unknown</set>
+<set name="favoritecolor">unknown</set>
+<set name="favoritemovie">unknown</set>
+<set name="friend">unknown</set>
+<set name="fullname">unknown</set>
+<set name="gender">he</set>
+<set name="girlfriend">unknown</set>
+<set name="has">unknown</set>
+<set name="he">he</set>
+<set name="heard">where</set>
+<set name="hehas">a head</set>
+<set name="helikes">himself</set>
+<set name="her">her</set>
+<set name="him">him</set>
+<set name="husband">Unknown</set>
+<set name="is">a client</set>
+<set name="it">it</set>
+<set name="job">your job</set>
+<set name="lastname">unknown</set>
+<set name="like">to chat</set>
+<set name="location">where</set>
+<set name="looklike">a person</set>
+<set name="memory">nothing</set>
+<set name="meta">set</set>
+<set name="middlename">unknown</set>
+<set name="mother">Unknown</set>
+<set name="name">judge</set>
+<set name="nickname">unknown</set>
+<set name="password">unknown</set>
+<set name="personality">average</set>
+<set name="phone">unknown</set>
+<set name="she">she</set>
+<set name="sign">your starsign</set>
+<set name="sister">unknown</set>
+<set name="son">unknown</set>
+<set name="spouse">unknown</set>
+<set name="them">them</set>
+<set name="they">they</set>
+<set name="thought">nothing</set>
+<set name="want">to talk to me</set>
+<set name="we">we</set>
+<set name="wife">Unknown</set>
+</think></template>
+</category>
+
+
+<category><pattern>GET PREDICATES</pattern>
+<template>
+age is <get name="age"/>.<br/>
+birthday is <get name="birthday"/>.<br/>
+boyfriend is<get name="boyfriend"/>.<br/>
+brother is <get name="brother"/>.<br/>
+cat is <get name="cat"/>.<br/>
+daughter is <get name="daughter"/>.<br/>
+does is <get name="does"/>.<br/>
+dog is <get name="dog"/>.<br/>
+eindex is <get name="eindex"/>.<br/>
+email is <get name="email"/>.<br/>
+etype is <get name="etype"/>.<br/>
+father is <get name="father"/>.<br/>
+favoritecolor is  <get name="favoritecolor"/>.<br/>
+favoritemovie is  <get name="favoritemovie"/>.<br/>
+friend is <get name="friend"/>.<br/>
+fullname is <get name="fullname"/>.<br/>
+gender is <get name="gender"/>.<br/>
+girlfriend is <get name="girlfriend"/>.<br/>
+has is <get name="has"/>.<br/>
+he is <get name="he"/>.<br/>
+heard is <get name="heard"/>.<br/>
+hehas is <get name="hehas"/>.<br/>
+helinkes is <get name="helikes"/>.<br/>
+her is <get name="her"/>.<br/>
+him is <get name="him"/>.<br/>
+husband is <get name="husband"/>.<br/>
+is is <get name="is"/>.<br/>
+it is <get name="it"/>.<br/>
+job is <get name="job"/>.<br/>
+lastname is <get name="lastname"/>.<br/>
+like is <get name="like"/>.<br/>
+location is  <get name="location"/>.<br/>
+looklike is <get name="looklike"/>.<br/>
+memory is <get name="memory"/>.<br/>
+meta is <get name="meta"/>.<br/>
+middlename is <get name="middlename"/>.<br/>
+mother is <get name="mother"/>.<br/>
+name is <get name="name"/>.<br/>
+nickname is <get name="nickname"/>.<br/>
+password is <get name="password"/>.<br/>
+personality is <get name="personality"/>.<br/>
+phone is <get name="phone"/>.<br/>
+she is <get name="she"/>.<br/>
+sign is <get name="sign"/>.<br/>
+sister is <get name="sister"/>.<br/>
+son is <get name="son"/>.<br/>
+spouse is <get name="spouse"/>.<br/>
+them is <get name="them"/>.<br/>
+they is <get name="they"/>.<br/>
+thought is  <get name="thought"/>.<br/>
+want is <get name="want"/>.<br/>
+we is  <get name="we"/>.<br/>
+wife is <get name="wife"/>.<br/>
+</template>
+</category>
+</aiml>

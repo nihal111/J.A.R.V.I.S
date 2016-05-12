@@ -1,0 +1,61 @@
+<aiml version="1.0.1" encoding="UTF-8">
+	
+ <!-- VOLUME CONTROLS -->
+
+	 <category>
+        <pattern>INCREASE VOLUME</pattern>
+         <template>
+            <system>python volume.py i 10</system>
+        </template>
+    </category>
+
+       <category>
+        <pattern>DECREASE VOLUME</pattern>
+         <template>
+            <system>python volume.py d 10</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>INCREASE VOLUME BY *</pattern>
+         <template>
+            <system>python volume.py i <star/></system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>INCREASE VOLUME TO *</pattern>
+         <template>
+            <system>python volume.py s <star/></system>
+        </template>
+    </category>
+
+     <category>
+        <pattern>DECREASE VOLUME BY *</pattern>
+         <template>
+            <system>python volume.py d <star/></system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DECREASE VOLUME TO *</pattern>
+         <template>
+            <system>python volume.py s <star/></system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SET VOLUME TO *</pattern>
+         <template>
+            <system>python volume.py s <star/></system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS * VOLUME</pattern>
+         <template>
+            <system>python volume.py g</system>
+        </template>
+    </category>
+
+</aiml>

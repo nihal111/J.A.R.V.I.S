@@ -1,0 +1,84 @@
+Explanations:
+
+python file.py & - runs file in background. But if file is giving an output, standard output will be shown on terminal window. 
+python file.py > /dev/null - Prevents any output from coming on the screen. Redirects the command standard output to the null device, which is a special device which discards the information written to it. This will redirect the standard output - you'll still see errors.
+python file.py &> /dev/null - redirects all output including errors.
+bash -c "command" - executes the command in bash in non-interactive mode. Prevents a background process from displaying it's PID and DOne message.
+
+Outputs:
+
+nihal@nihal-R510J:~$ python file.py
+	running
+	running
+	running
+	running
+
+nihal@nihal-R510J:~$ python file.py &
+	[1] 3088
+	nihal@nihal-R510J:~$ running
+	running
+	running
+	running
+
+	[1]+  Done                    python file.py
+
+nihal@nihal-R510J:~$ python file.py > /dev/null
+	no output
+
+nihal@nihal-R510J:~$ python file.py &
+	[1] 3145
+	nihal@nihal-R510J:~$ running
+	running
+	running
+	running
+
+	[1]+  Done                    python file.py
+
+nihal@nihal-R510J:~$ python file.py &> /dev/null
+	no output. But runs on foreground
+
+nihal@nihal-R510J:~$ python file.py &> /dev/null &
+	[1] 3162
+	nihal@nihal-R510J:~$ 
+	[1]+  Done                    python file.py &> /dev/null
+
+nihal@nihal-R510J:~$ bash -c "python file.py"
+	running
+	running
+	running
+	running
+
+nihal@nihal-R510J:~$ bash -c "python file.py &" (Only works when no standard output stream)
+	nihal@nihal-R510J:~$ running
+	running
+	running
+	running
+
+nihal@nihal-R510J:~$ bash -c "python file.py &> /dev/null"
+	no output. But runs on foreground.
+
+nihal@nihal-R510J:~$ bash -c "python file.py &> /dev/null &"
+	Works perfect. No output. And runs in background.
+
+
+
+Volume Control:
+	Using volume.py:
+		g or empty set of args returns current volume.
+		"i n" increases volume by n.
+		"d n" decreases volume by n.
+		"s n" sets volume to n.
+	Using command line:
+		To get current volume:
+		amixer -c 1 -M -D pulse get Master | grep -o -E [[:digit:]]+%
+		To increase volume:
+		amixer -D pulse sset Master 5%+ --quiet
+		To increase volume:
+		amixer -D pulse sset Master 5%- --quiet
+		To mute/unmute:
+		amixer -D pulse sset Master mute --quiet
+		amixer -D pulse sset Master unmute --quiet
+		To reach beyond 100%
+		pactl set-sink-volume 0 150%
+		or
+		pactl set-sink-volume 1 150%

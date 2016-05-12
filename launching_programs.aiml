@@ -1,0 +1,332 @@
+<aiml version="1.0.1" encoding="UTF-8">
+	
+ <!-- Launching programs -->
+
+    <category>
+        <pattern>OPEN NAUTILUS</pattern>
+         <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system>nautilus</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* OPEN NAUTILUS</pattern>
+         <template>
+            <srai>OPEN NAUTILUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CLOSE NAUTILUS</pattern>
+         <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system>nautilus -q</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CLOSE NAUTILUS</pattern>
+         <template>
+            <srai>CLOSE NAUTILUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TAKE ME HOME</pattern>
+         <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system>nautilus ~</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TAKE ME TO *</pattern>
+         <template>
+            <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system>nautilus <star/></system>
+        </template>
+    </category>
+
+
+
+
+    <category>
+        <pattern>OPEN RHYTHMBOX</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> bash -c "rhythmbox &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* OPEN RHYTHMBOX *</pattern>
+        <template>
+             <srai>OPEN RHYTHMBOX</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OPEN RHYTHMBOX *</pattern>
+        <template>
+             <srai>OPEN RHYTHMBOX</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* OPEN RHYTHMBOX</pattern>
+        <template>
+             <srai>OPEN RHYTHMBOX</srai>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>OPEN CALCULATOR</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> bash -c "gnome-calculator &amp;> /dev/null &amp;" </system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* OPEN CALCULATOR *</pattern>
+        <template>
+             <srai>OPEN CALCULATOR</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OPEN CALCULATOR *</pattern>
+        <template>
+             <srai>OPEN CALCULATOR</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* OPEN CALCULATOR</pattern>
+        <template>
+             <srai>OPEN CALCULATOR</srai>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>OPEN VLC</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> bash -c "vlc &amp;> /dev/null &amp;"</system>
+        </template>
+        
+    </category>
+
+    <category>
+        <pattern>* OPEN VLC *</pattern>
+        <template>
+             <srai>OPEN VLC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OPEN VLC *</pattern>
+        <template>
+             <srai>OPEN VLC</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* OPEN VLC</pattern>
+        <template>
+             <srai>OPEN VLC</srai>
+        </template>
+    </category>
+
+
+
+
+    <category>
+        <pattern>OPEN FIREFOX</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> bash -c "firefox &amp;> /dev/null &amp;"</system>
+        </template>
+        
+    </category>
+
+    <category>
+        <pattern>* OPEN FIREFOX *</pattern>
+        <template>
+             <srai>OPEN FIREFOX</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OPEN FIREFOX *</pattern>
+        <template>
+             <srai>OPEN FIREFOX</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* OPEN FIREFOX</pattern>
+        <template>
+             <srai>OPEN FIREFOX</srai>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>OPEN CHROMIUM</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> bash -c "chromium-browser 'www.google.com' &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* OPEN CHROMIUM *</pattern>
+        <template>
+             <srai>OPEN CHROMIUM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OPEN CHROMIUM *</pattern>
+        <template>
+             <srai>OPEN CHROMIUM</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* OPEN CHROMIUM</pattern>
+        <template>
+             <srai>OPEN CHROMIUM</srai>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>OPEN BROWSER</pattern>
+        <template>
+             <srai>OPEN CHROMIUM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* OPEN BROWSER *</pattern>
+        <template>
+             <srai>OPEN CHROMIUM</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OPEN BROWSER *</pattern>
+        <template>
+             <srai>OPEN CHROMIUM</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* OPEN BROWSER</pattern>
+        <template>
+             <srai>OPEN CHROMIUM</srai>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>GOOGLE *</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> chromium-browser "http://www.google.com/search?q=<star/>"</system>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>YOUTUBE *</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> chromium-browser "https://www.youtube.com/results?search_query=<star/>"</system>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>GOOGLE MAPS *</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+            </random>
+            <system> chromium-browser "https://www.google.co.in/maps/search/<star/>"</system>
+        </template>
+    </category>
+
+     <category>
+        <pattern>SEARCH FOR * ON GOOGLE MAPS</pattern>
+        <template>
+             <srai>GOOGLE MAPS <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SEARCH FOR * IN GOOGLE MAPS</pattern>
+        <template>
+             <srai>GOOGLE MAPS <star/></srai>
+        </template>
+    </category>
+
+
+</aiml>

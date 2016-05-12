@@ -1,0 +1,142 @@
+<aiml version="1.0.1" encoding="UTF-8">
+	
+<!-- MUSIC CONTROLS -->
+    <category>
+        <pattern>PLAY MUSIC</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+               <li>Playing music!</li>
+            </random>
+            <system> rhythmbox-client --play</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PLAY MUSIC *</pattern>
+        <template>
+            <srai>PLAY MUSIC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PLAY MUSIC</pattern>
+        <template>
+            <srai>PLAY MUSIC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAY MUSIC *</pattern>
+        <template>
+            <srai>PLAY MUSIC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAUSE MUSIC</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+               <li>Paused music!</li>
+            </random>
+            <system> rhythmbox-client --pause</system>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* PAUSE MUSIC *</pattern>
+        <template>
+             <srai>PAUSE MUSIC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAUSE MUSIC *</pattern>
+        <template>
+             <srai>PAUSE MUSIC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PAUSE MUSIC</pattern>
+        <template>
+             <srai>PAUSE MUSIC</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NEXT SONG</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+               <li>Playing the next song!</li>
+            </random>
+            <system> rhythmbox-client --next</system>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>* NEXT SONG *</pattern>
+        <template>
+             <srai>NEXT SONG</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NEXT SONG *</pattern>
+        <template>
+             <srai>NEXT SONG</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>* NEXT SONG</pattern>
+        <template>
+             <srai>NEXT SONG</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PREVIOUS SONG</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+               <li>Playing the previous song!</li>
+            </random>
+            <system> rhythmbox-client --previous</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PREVIOUS SONG *</pattern>
+        <template>
+             <srai>PREVIOUS SONG</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PREVIOUS SONG *</pattern>
+        <template>
+             <srai>PREVIOUS SONG</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PREVIOUS SONG</pattern>
+        <template>
+             <srai>PREVIOUS SONG</srai>
+        </template>
+    </category>        
+                
+</aiml>

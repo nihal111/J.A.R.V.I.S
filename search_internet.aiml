@@ -1,0 +1,147 @@
+<aiml version="1.0.1" encoding="UTF-8">
+	
+ <!-- Search internet -->
+
+    <category>
+        <pattern>OPEN FACEBOOK</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "http://www.facebook.com"</system>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>OPEN GOOGLE</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "http://www.google.com"</system>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>GOOGLE *</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "http://www.google.com/search?q=<star/>"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SEARCH FOR * ON GOOGLE></pattern>
+        <template>
+             <srai>GOOGLE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SEARCH GOOGLE FOR *</pattern>
+        <template>
+             <srai>YOUTUBE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OPEN YOUTUBE</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "http://www.youtube.com"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YOUTUBE *</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "https://www.youtube.com/results?search_query=<star/>"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SEARCH FOR * ON YOUTUBE></pattern>
+        <template>
+             <srai>YOUTUBE <star/></srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>SEARCH YOUTUBE FOR *</pattern>
+        <template>
+             <srai>YOUTUBE <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GOOGLE MAPS *</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "https://www.google.co.in/maps/search/<star/>"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SEARCH FOR * ON GOOGLE MAPS</pattern>
+        <template>
+             <srai>GOOGLE MAPS <star/></srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>SEARCH GOOGLE MAPS FOR *</pattern>
+        <template>
+             <srai>GOOGLE MAPS <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAY SONG *</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "<system> python youtube.py "<star/>"</system>"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAY SONG *</pattern>
+        <template>
+             <random>
+               <li>Sure thing! </li>
+               <li>Right away, sir! </li>
+               <li>On it! </li>
+            </random>
+            <system> chromium-browser "<system> python youtube.py "<star/>"</system>"</system>
+        </template>
+    </category>
+
+
+</aiml>

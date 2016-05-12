@@ -1,0 +1,38 @@
+<aiml version="1.0.1" encoding="UTF-8">
+	
+<!-- WALLPAPER CHANGER -->
+    <category>
+        <pattern>CHANGE WALLPAPER</pattern>
+        <template>
+             <random>
+               <li>Sure thing!</li>
+               <li>Right away, sir!</li>
+               <li>On it!</li>
+               <li>Changed the wallpaper, sir!</li>
+            </random>
+            <system> python wallpaper.py</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CHANGE WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CHANGE WALLPAPER</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CHANGE WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+                
+</aiml>

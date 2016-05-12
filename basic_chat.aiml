@@ -1,0 +1,313 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+
+     <category>
+        <pattern>HELLO *</pattern>
+        <template>
+            Hello, sir!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>JARVIS</pattern>
+        <template>
+            <random>
+                <li>Welcome home sir!</li> 
+                <li>Always a pleasure working with you sir!</li> 
+                <li>Nice to see you sir!</li> 
+                <li>What would you like me to do sir?</li> 
+                <li>our will is my command!</li> 
+            </random>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern>SAY WITH ME *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>REPEAT *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+   <category>
+        <pattern>REPEAT AFTER ME *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SAY *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>JARVIS *</pattern>
+        <template>
+            <srai><star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* JARVIS</pattern>
+        <template>
+            <srai><star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm J.A.R.V.I.S
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO CREATED YOU</pattern>
+        <template>
+            Nihal Singh created me!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO MADE YOU</pattern>
+        <template>
+            Nihal Singh made me!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO CREATED JARVIS</pattern>
+        <template>
+            Nihal Singh created me!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS YOUR CREATOR</pattern>
+        <template>
+            Nihal Singh created me!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS NIHAL SINGH</pattern>
+        <template>
+            Nihal Singh is my father!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS nihal111</pattern>
+        <template>
+            nihal111 is Nihal Singh.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS YOUR FATHER</pattern>
+        <template>
+            Nihal Singh is my father.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS YOUR MOTHER</pattern>
+        <template>
+            It's a secret. Ask my father.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT DOES JARVIS STAND FOR</pattern>
+        <template>
+            JARVIS stands for Just A Rather Very Intelligent System
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS THE IRON MAN</pattern>
+        <template>
+            Iron man is the one who created me.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS THE REAL IRON MAN</pattern>
+        <template>
+            The real Iron man is Tony Stark.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT TIME IS IT</pattern>
+        <template>
+            The time is <system>date "+%l %M %P"</system>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE TIME</pattern>
+        <template>
+            <srai>WHAT TIME IS IT</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO AM I</pattern>
+        <template>
+            Sir! <system>bash -c "rhythmbox ironman.mp3 &amp;> /dev/null &amp;"</system>
+        </template>
+    </category>
+
+    <category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+           <li>I am sorry, I don't quite understand</li>
+           <li>I don't understand that yet. Maybe you could teach me.</li>
+           <li>I don't know how to answer that. Maybe I could interest you in something else.</li>
+        </random>
+    </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT *</pattern>
+        <template>
+            Do you want me to google that for you?
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO *</pattern>
+        <template>
+            Do you want me to google that for you?
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHERE *</pattern>
+        <template>
+            Do you want me to google that for you?
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH *</pattern>
+        <template>
+            Do you want me to google that for you?
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHY *</pattern>
+        <template>
+            Do you want me to google that for you?
+        </template>
+    </category>
+
+    <category>
+        <pattern>SYSTEM STATUS</pattern>
+        <template>
+            All systems are at 100 percent. Battery <system>upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "percentage"</system>. Battery <system>upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state"</system>. <system>ps -ef -C command_name --no-headers | wc -l</system>
+            processes are currently running. <system>python volume.py g</system>
+        </template>
+    </category>
+
+     <category>
+        <pattern>* SYSTEM STATUS *</pattern>
+        <template>
+            <srai>SYSTEM STATUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SYSTEM STATUS</pattern>
+        <template>
+            <srai>SYSTEM STATUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SYSTEM STATUS *</pattern>
+        <template>
+            <srai>SYSTEM STATUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SYSTEM REPORT *</pattern>
+        <template>
+            <srai>SYSTEM STATUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SYSTEM REPORT</pattern>
+        <template>
+            <srai>SYSTEM STATUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SYSTEM REPORT *</pattern>
+        <template>
+            <srai>SYSTEM STATUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>
+            I am fine, sir. <srai>SYSTEM STATUS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>DO YOU WANT ME TO GOOGLE THAT FOR YOU</that>
+        <template>
+            <srai>GOOGLE <input index="2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAY ME A SONG</pattern>
+        <template>
+            What song, sir?
+        </template>
+    </category>
+
+    <category>
+        <pattern>PLAY A SONG</pattern>
+        <template>
+            What song, sir?
+        </template>
+    </category>
+
+     <category>
+        <pattern>*</pattern>
+        <that>WHAT SONG SIR</that>
+        <template>
+            <srai>PLAY SONG <input index="1"/></srai>
+        </template>
+    </category>
+</aiml>
