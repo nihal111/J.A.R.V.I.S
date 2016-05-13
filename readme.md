@@ -99,22 +99,25 @@ Combined with a few python scripts, J.A.R.V.I.S now performs quite a few tasks:
 
 ##Requirements:
 
-- ####Speech Recognition
+- ###AIML (For Pattern Recognition)
+    pip install aiml
+
+- ###Speech Recognition
 	pip install SpeechRecognition
 
-- ####PyAudio is required for microphone input
-	pip install pyaudio in a terminal
+- ###Audio is required for microphone input
+	pip install pyaudio
 
-- ####pyalsaaudio: (For Volume Control)
-	sudo pip install pyalsaaudio
+- ###alsaaudio: (For Volume Control)
+	pip install pyalsaaudio
 
-- ####pyttsx: (Offline Text to Speech Service)
-	sudo pip install pyttsx
+- ###ttsx: (Offline Text to Speech Service)
+	pip install pyttsx
 
-- ####gTTS: (Google Text to Speech service)
-	sudo pip install gTTS
+- ###gTS: (Google Text to Speech service)
+	pip install gTTS
 
-- ####pygame: (For audio playback with gTTS)
+- ###game: (For audio playback with gTTS)
 	sudo apt-get build-dep python-pygame<br>
 	sudo apt-get install mercurial<br>
 	pip install hg+http://bitbucket.org/pygame/pygame
@@ -133,3 +136,4 @@ Voice mode may give a series of warnings for numerous reasons, but still might f
 ##Contribution:
 
 A lot can be done with this project. Core AI chatbot like functionality can be added. More python scripts can be associated. Pull requests for any such changes are accepted. Feel free to fork this project and make your own changes too.
+
