@@ -31,7 +31,7 @@ Combined with a few python scripts, J.A.R.V.I.S now performs quite a few tasks:
     **J.A.R.V.I.S :** Right away, sir!
 
 - ### Tells time.
-    
+
     **Talk to J.A.R.V.I.S :** what time is it?<br>
     **J.A.R.V.I.S :** The time is 4 43 am
 
@@ -73,7 +73,7 @@ Combined with a few python scripts, J.A.R.V.I.S now performs quite a few tasks:
     **J.A.R.V.I.S :** On it!
 
 - ### Launches Programs.
-    
+
     **Talk to J.A.R.V.I.S :** open nautilus<br>
     **J.A.R.V.I.S :** Right away, sir!<br>
     **Talk to J.A.R.V.I.S :** take me to /etc<br>
@@ -85,7 +85,7 @@ Combined with a few python scripts, J.A.R.V.I.S now performs quite a few tasks:
 
 
 - ### Other:
-    
+
     Standard replies for unrecognized/unmatched inputs
 
    **Talk to J.A.R.V.I.S :** you are dumb<br>
@@ -98,7 +98,8 @@ Combined with a few python scripts, J.A.R.V.I.S now performs quite a few tasks:
     closes the python script.
 
 ## Requirements:
-
+- ### Complete Installation
+ To install all required packages, run `prep.sh` or follow the instructions below.
 - ### AIML (For Pattern Recognition)
     `pip install aiml`
 
