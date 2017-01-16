@@ -99,6 +99,8 @@ Combined with a few python scripts, J.A.R.V.I.S now performs quite a few tasks:
 
 ## Requirements:
 
+You can run `pip install -r requirements.txt` to install them all.
+
 - ### AIML (For Pattern Recognition)
     `pip install aiml`
 

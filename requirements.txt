@@ -1,0 +1,5 @@
+aiml
+SpeechRecognition
+pyalsaaudio
+pyttsx
+gTTS
