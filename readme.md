@@ -115,16 +115,16 @@ You can run `pip install -r requirements.txt` to install them all.
 
 - ### ttsx: (Offline Text to Speech Service)
     `pip install pyttsx`
+- ### Optional for Google Text to Speech:
+   + #### gTTS: (Google Text to Speech service)
+      `pip install gTTS`
 
-- ### gTTS: (Google Text to Speech service)
-    `pip install gTTS`
-
-- ### PyGame: (For audio playback with gTTS)
-    ```
-    sudo apt-get build-dep python-pygame<br>
-    sudo apt-get install mercurial<br>
-    pip install hg+http://bitbucket.org/pygame/pygame
-    ```
+   + #### PyGame: (For audio playback with gTTS)
+       ```
+       sudo apt-get build-dep python-pygame<br>
+       sudo apt-get install mercurial<br>
+       pip install hg+http://bitbucket.org/pygame/pygame
+       ```
 
 ## Installation:
 
