@@ -1,4 +1,4 @@
-# J.A.R.V.I.S - Just A Rather Very Intelligent System
+# J.O.S.H.U.A
 <br>
 ##### Created and Tested on Linux with Python 2.7
 
