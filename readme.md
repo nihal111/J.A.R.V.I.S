@@ -130,6 +130,9 @@ Individual packages listed as follows-
    + #### PyGame: (For audio playback with gTTS)
        `pip install pygame`
 
+- ### argparse (For parsing arguments)
+    `pip install argparse`
+
 ## Installation:
 
 Clone this repository. Change directories to go to that directory. Run the script "script.py" **from the directory containing it**.
