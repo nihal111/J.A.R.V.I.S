@@ -123,9 +123,12 @@ Individual packages listed as follows-
 - ### ttsx: (Offline Text to Speech Service)
     `pip install pyttsx`
 
-- ### Google Text to Speech:
+- ### Optional for Google Text to Speech :
    + #### gTTS: (Google Text to Speech service)
       `pip install gTTS`
+
+   + #### PyGame: (For audio playback with gTTS)
+       `pip install pygame`
 
 ## Installation:
 
