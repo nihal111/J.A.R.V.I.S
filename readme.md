@@ -1,5 +1,4 @@
 # J.A.R.V.I.S - Just A Rather Very Intelligent System
-<br>
 
 #### Created and Tested on Linux with Python 2.7
 
@@ -138,9 +137,11 @@ Individual packages listed as follows-
 Clone this repository. Change directories to go to that directory. Run the script "script.py" **from the directory containing it**.
 Run script as:
 
-`python script.py text` : for text mode of input
+`python script.py` : for text mode (default) of input
 
-`python script.py voice` : for voice mode of input
+`python script.py --voice` : for voice mode of input
+
+`python script.py --voice --gtts` : for voice mode of input, with Google Text to Speech enabled
 
 Voice mode may give a series of warnings for numerous reasons, but still might fuction properly.
 

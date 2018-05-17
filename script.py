@@ -15,7 +15,7 @@ def get_arguments():
     optional.add_argument('-v', '--voice', action='store_true', required=False,
                           help='Enable voice mode')
     optional.add_argument('-g', '--gtts', action='store_true', required=False,
-                          help='enable Google Text To Speech engine')
+                          help='Enable Google Text To Speech engine')
     arguments = parser.parse_args()
     return arguments
 
