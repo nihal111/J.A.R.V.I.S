@@ -23,7 +23,7 @@
                 <li>Always a pleasure working with you sir!</li> 
                 <li>Nice to see you sir!</li> 
                 <li>What would you like me to do sir?</li> 
-                <li>our will is my command!</li> 
+                <li>Your will is my command!</li> 
             </random>
         </template>
     </category>
@@ -153,7 +153,7 @@
     <category>
         <pattern>WHO IS THE REAL IRON MAN</pattern>
         <template>
-            The real Iron man is Tony Stark.
+            The real Iron Man is Tony Stark.
         </template>
     </category>
 
