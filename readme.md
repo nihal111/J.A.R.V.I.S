@@ -101,7 +101,7 @@ Combined with a few python scripts, J.A.R.V.I.S now performs quite a few tasks:
 
 Make sure you install these packages before moving forward to other python libraries-
 
-`sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools`
+`sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools espeak`
 
 You can run `pip install -r requirements.txt` to install them all.
 
