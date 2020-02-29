@@ -5,16 +5,6 @@
 An attempt to make a very simple, Personal Assistant that understands speech as well as text input and is capable of performing tasks other than conversing.
 This project is based on AIML 1.0 and uses pyaiml for using the AIML interpreter in python. AIML, is based on pattern matching and this project does not implement any sort of machine learning or language processing. All conversation is only for the hardcoded patterns, which are quite few. Can be easily extended to add AIML scripts of ALICE and other existing AIs.
 
-- ### Rhythmbox: Play, Pause, Open.
-
-    Uses shell commands to play and pause rhythmbox music.
-
-    **Talk to J.A.R.V.I.S :** play music<br>
-    **J.A.R.V.I.S :** On it!<br>
-    **Talk to J.A.R.V.I.S :** play music<br>
-    **J.A.R.V.I.S :** On it!<br>
-    **Talk to J.A.R.V.I.S :** please open rhythmbox jarvis<br>
-    **J.A.R.V.I.S :** Right away, sir!
 
 - ### Tasks that the Bot can perform :
 
