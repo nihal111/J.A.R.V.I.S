@@ -23,7 +23,7 @@ Make sure you install these packages before moving forward to other python libra
 
 You can run `pip install -r requirements.txt` to install them all.
 
-If this returns any errors you can install the libraries by running the following command : 
+If this returns any errors you can install the libraries by running the following command/s : 
 
 `sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools`
 
@@ -44,6 +44,12 @@ Individual packages listed as follows-
 
 - ### alsaaudio: (For Volume Control, Linux only)
     `pip install pyalsaaudio`
+    
+    This command fails to execute in most cases, because it needs Visual C++ 9.0 (it is for Python 2.7)
+    
+    You can install Visual C++ 9.0 from the link below :
+    
+    https://www.microsoft.com/en-in/download/details.aspx?id=44266
 
 - ### ttsx: (Offline Text to Speech Service)
     `pip install pyttsx`
@@ -74,3 +80,4 @@ Voice mode may give a series of warnings for numerous reasons, but still might f
 ## Contribution:
 
 A lot can be done with this project. Core AI chatbot like functionality can be added. More python scripts can be associated. Pull requests for any such changes are accepted. Feel free to fork this project and make your own changes too.
+
