@@ -46,7 +46,7 @@ def speak(jarvis_speech):
 def listen():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Talk to J.A.R.V.I.S: ")
+        print("Talk to Bot: ")
         audio = r.listen(source)
     try:
         print r.recognize_google(audio)
@@ -95,9 +95,9 @@ if __name__ == '__main__':
         if mode == "voice":
             response = listen()
         else:
-            response = raw_input("Talk to J.A.R.V.I.S : ")
+            response = raw_input("Talk to Bot : ")
         if response.lower().replace(" ", "") in terminate:
             break
         jarvis_speech = kernel.respond(response)
-        print "J.A.R.V.I.S: " + jarvis_speech
+        print "Bot: " + jarvis_speech
         speak(jarvis_speech)
