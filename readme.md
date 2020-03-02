@@ -64,7 +64,7 @@ Individual packages listed as follows-
 - ### argparse (For parsing arguments)
     `pip install argparse`
 
-## Installation:
+## Running the project:
 
 Clone this repository. Change directories to go to that directory. Run the script "script.py" **from the directory containing it**.
 Run script as:
