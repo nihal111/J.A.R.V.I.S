@@ -21,11 +21,15 @@ This project is based on AIML 1.0 and uses pyaiml for using the AIML interpreter
 
 Make sure you install these packages before moving forward to other python libraries-
 
-`sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools`
-OR 
-`pip install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools`
-
 You can run `pip install -r requirements.txt` to install them all.
+
+If this returns any errors you can install the libraries by running the following command : 
+
+`sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools`
+
+OR 
+
+`python -m pip install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools`
 
 Individual packages listed as follows-
 
