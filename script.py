@@ -5,7 +5,7 @@ import argparse
 
 
 mode = "text"
-voice = "pyttsx"
+voice = "pyttsx3"
 terminate = ['bye', 'buy', 'shutdown', 'exit', 'quit', 'gotosleep', 'goodbye']
 
 
@@ -31,7 +31,7 @@ def gtts_speak(jarvis_speech):
 
 
 def offline_speak(jarvis_speech):
-    engine = pyttsx.init()
+    engine = pyttsx3.init()
     engine.say(jarvis_speech)
     engine.runAndWait()
 
@@ -46,11 +46,12 @@ def speak(jarvis_speech):
 def listen():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Talk to Bot: ")
+        print("Talk to Nuco : ")
         audio = r.listen(source)
+		#print("Terminate\Processing Speech")
     try:
-        print r.recognize_google(audio)
-        return r.recognize_google(audio)
+        print (r.recognize_google(audio))
+        #return (r.recognize_google(audio))
     except sr.UnknownValueError:
         speak(
             "I couldn't understand what you said! Would you like to repeat?")
@@ -76,11 +77,11 @@ if __name__ == '__main__':
             from pygame import mixer
             voice = "gTTS"
         except ImportError:
-            import pyttsx
+            import pyttsx3
             print("\nInstall gTTS and pygame to use this feature." +
-                  "\nUsing pyttsx\n")
+                  "\nUsing pyttsx3\n")
     else:
-        import pyttsx
+        import pyttsx3
 
     kernel = aiml.Kernel()
 
@@ -95,9 +96,9 @@ if __name__ == '__main__':
         if mode == "voice":
             response = listen()
         else:
-            response = raw_input("Talk to Bot : ")
+            response = input("Talk to Nuco : ")
         if response.lower().replace(" ", "") in terminate:
             break
         jarvis_speech = kernel.respond(response)
-        print "Bot: " + jarvis_speech
+        print ("Nuco : " + jarvis_speech)		
         speak(jarvis_speech)
