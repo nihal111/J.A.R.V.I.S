@@ -7,11 +7,24 @@
             Well, hello!
         </template>
     </category>
-
+    
      <category>
         <pattern>HELLO *</pattern>
         <template>
             Hello, sir!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            <random>
+                <li>Hello, Sir!</li> 
+                <li>Pleasure to see you sir!</li> 
+                <li>Nice to see you sir!</li> 
+                <li>Hi, How may I assist you today?</li> 
+                <li>Welcome! How may I assist you? </li> 
+            </random>
         </template>
     </category>
     
