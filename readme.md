@@ -1,4 +1,5 @@
 # J.A.R.V.I.S - Just A Rather Very Intelligent System
+#J.A.RV.I.S with OS module voice commandes
 
 #### Created and Tested on Linux with Python 2.7
 
