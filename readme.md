@@ -1,4 +1,4 @@
-# J.A.R.V.I.S - Just A Rather Very Intelligent System
+# J.A.R.V.I.S(AI)- Just A Rather Very Intelligent System
 
 #### Created and Tested on Linux with Python 2.7
 
