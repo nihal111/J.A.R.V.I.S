@@ -41,6 +41,18 @@ def speak(jarvis_speech):
         gtts_speak(jarvis_speech)
     else:
         offline_speak(jarvis_speech)
+        
+def temperature(city):
+	api_add = f'http://api.openweathermap.org/data/2.5/weather?appid=1ff1ec03072dc3e27d75e920aebd67a9&q={city}&units=metric'
+	
+	json_data = requests.get(api_add).json()
+	temp = json_data["main"]["temp"]
+	cond = json_data["weather"][0]["description"]
+	name = json_data["name"]
+	speak(f"temperature of {name} is {temp} degree celcius and the condition is {cond}")
+	print(f"temperature of {name} is {temp} degree celcius and the condition is {cond}")
+        
+        
 
 
 def listen():
@@ -70,6 +82,11 @@ if __name__ == '__main__':
         except ImportError:
             print("\nInstall SpeechRecognition to use this feature." +
                   "\nStarting text mode\n")
+    if "temperature of" in query:
+				speak("please wait")
+				idx = query.index("f")+ 2
+				city = query[idx:]
+				temperature(city)        
     if (args.gtts):
         try:
             from gtts import gTTS
