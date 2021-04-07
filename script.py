@@ -5,7 +5,7 @@ import argparse
 
 
 mode = "text"
-voice = "pyttsx"
+voice = "pyttsx3"
 terminate = ['bye', 'buy', 'shutdown', 'exit', 'quit', 'gotosleep', 'goodbye']
 
 
@@ -31,7 +31,7 @@ def gtts_speak(jarvis_speech):
 
 
 def offline_speak(jarvis_speech):
-    engine = pyttsx.init()
+    engine = pyttsx3.init()
     engine.say(jarvis_speech)
     engine.runAndWait()
 
@@ -49,11 +49,11 @@ def listen():
         print("Talk to J.A.R.V.I.S: ")
         audio = r.listen(source)
     try:
-        print r.recognize_google(audio)
+        print(r.recognize_google(audio))
         return r.recognize_google(audio)
     except sr.UnknownValueError:
-        speak(
-            "I couldn't understand what you said! Would you like to repeat?")
+        speak("I couldn't understand what you said! Would you like to repeat?")
+
         return(listen())
     except sr.RequestError as e:
         print("Could not request results from " +
@@ -76,11 +76,11 @@ if __name__ == '__main__':
             from pygame import mixer
             voice = "gTTS"
         except ImportError:
-            import pyttsx
+            import pyttsx3
             print("\nInstall gTTS and pygame to use this feature." +
-                  "\nUsing pyttsx\n")
+                  "\nUsing pyttsx3\n")
     else:
-        import pyttsx
+        import pyttsx3
 
     kernel = aiml.Kernel()
 
@@ -99,5 +99,5 @@ if __name__ == '__main__':
         if response.lower().replace(" ", "") in terminate:
             break
         jarvis_speech = kernel.respond(response)
-        print "J.A.R.V.I.S: " + jarvis_speech
+        print("J.A.R.V.I.S: " + jarvis_speech)
         speak(jarvis_speech)
