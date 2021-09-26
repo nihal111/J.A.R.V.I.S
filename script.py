@@ -49,7 +49,7 @@ def listen():
         print("Talk to J.A.R.V.I.S: ")
         audio = r.listen(source)
     try:
-        print r.recognize_google(audio)
+        print (r.recognize_google(audio))
         return r.recognize_google(audio)
     except sr.UnknownValueError:
         speak(
